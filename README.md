@@ -1,8 +1,8 @@
 # Ipgeobase
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ipgeobase`. To experiment with that code, run `bin/console` for an interactive prompt.
+Gem for receiving metadata by IP (country, city, coordinates etc.). The [service](https://ip-api.com/), which makes a request with an IP address parameter and receives all information about it.
 
-TODO: Delete this and the text above, and describe your gem
+[![Ruby](https://github.com/cuurjol/ipgeobase/actions/workflows/main.yml/badge.svg)](https://github.com/cuurjol/ipgeobase/actions/workflows/main.yml)
 
 ## Installation
 
@@ -22,7 +22,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+ip_meta = Ipgeobase.lookup('8.8.8.8')
+ip_meta.city # Ashburn
+ip_meta.country # United States
+ip_meta.country_code # US
+ip_meta.lat # 39.03
+ip_meta.lon # -77.5
+```
 
 ## Development
 
@@ -32,4 +39,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ipgeobase.
+Bug reports and pull requests are welcome on GitHub at https://github.com/cuurjol/ipgeobase.
